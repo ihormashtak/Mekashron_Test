@@ -1,15 +1,19 @@
-object Form1: TForm1
+object frm_Login: Tfrm_Login
   Left = 0
   Top = 0
+  Border.Styling = False
+  BorderStyle = None
   Caption = 'Form1'
   ClientHeight = 640
   ClientWidth = 360
   Fill.Kind = Solid
+  Position = ScreenCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnResize = FormResize
   DesignerMasterStyle = 0
-  object Image_Email: TImage
+  object img_Email: TImage
     MultiResBitmap = <
       item
         Width = 336
@@ -33,7 +37,7 @@ object Form1: TForm1
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
   end
-  object Image_Password: TImage
+  object img_Password: TImage
     MultiResBitmap = <
       item
         Width = 336
@@ -51,13 +55,14 @@ object Form1: TForm1
           2AE50D66D31F91CCA4F26E0000000049454E44AE426082}
         FileName = 'D:\Mekashron\Panel.png'
       end>
+    Anchors = []
     Position.X = 12.000000000000000000
     Position.Y = 370.000000000000000000
     Size.Width = 336.000000000000000000
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
   end
-  object Label1: TLabel
+  object lbl_Invite: TLabel
     StyledSettings = []
     Position.X = 12.000000000000000000
     Position.Y = 280.000000000000000000
@@ -71,7 +76,7 @@ object Form1: TForm1
     Text = 'Please enter your login credentials'
     TabOrder = 5
   end
-  object Image_Logo: TImage
+  object img_Logo: TImage
     MultiResBitmap = <
       item
         Width = 84
@@ -268,7 +273,8 @@ object Form1: TForm1
     Size.Height = 84.000000000000000000
     Size.PlatformDefault = False
   end
-  object Label2: TLabel
+  object lbl_Logo: TLabel
+    AutoTranslate = False
     StyledSettings = []
     Position.X = 158.000000000000000000
     Position.Y = 181.000000000000000000
@@ -302,7 +308,7 @@ object Form1: TForm1
     TabOrder = 4
     OnClick = lbl_ForgPassClick
   end
-  object Image_Login: TImage
+  object img_Login: TImage
     MultiResBitmap = <
       item
         Width = 336
@@ -327,7 +333,7 @@ object Form1: TForm1
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
   end
-  object Image_Vector: TImage
+  object img_Vector: TImage
     MultiResBitmap = <
       item
         Width = 17
@@ -401,8 +407,9 @@ object Form1: TForm1
     Text = 'Login via  '
     TabOrder = 11
   end
-  object Edit2: TEdit
+  object edt_Passw: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Anchors = []
     StyleLookup = 'transparentedit'
     TabOrder = 2
     Text = 'Your password'
@@ -410,12 +417,12 @@ object Form1: TForm1
     TextSettings.Font.Size = 13.000000000000000000
     Position.X = 24.000000000000000000
     Position.Y = 374.000000000000000000
-    Size.Width = 313.000000000000000000
+    Size.Width = 336.000000000000000000
     Size.Height = 32.000000000000000000
     Size.PlatformDefault = False
     StyledSettings = [Family]
   end
-  object Edit1: TEdit
+  object edt_Email: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     StyleLookup = 'transparentedit'
     TabOrder = 1
@@ -429,7 +436,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     StyledSettings = [Family]
   end
-  object Label4: TLabel
+  object lbl_areNew: TLabel
     AutoSize = True
     StyledSettings = [Family]
     Position.X = 151.000000000000000000
@@ -443,7 +450,7 @@ object Form1: TForm1
     Text = 'New here?'
     TabOrder = 12
   end
-  object Image_Vector2: TImage
+  object img_Vector2: TImage
     MultiResBitmap = <
       item
         Width = 13
@@ -488,5 +495,41 @@ object Form1: TForm1
     TouchTargetExpansion.Bottom = 10.000000000000000000
     TabOrder = 14
     OnClick = lbl_CreateAccClick
+  end
+  object pns_Sys: TPanel
+    Position.X = -2.000000000000000000
+    Position.Y = -2.000000000000000000
+    Size.Width = 364.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pushpanel'
+    TabOrder = 15
+    object img_SysButtons: TImage
+      MultiResBitmap = <
+        item
+          Width = 46
+          Height = 10
+          PNG = {
+            89504E470D0A1A0A0000000D494844520000002E0000000A0806000000CB846C
+            17000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            011549444154484BAD94311682300C86A1830770F200BAC3013C80C7F0641EC3
+            0378005874C11D26272707F0FF4BAA56DAC290EFBDBC24A5901F9A90F77D7FCC
+            16608C3949986418860DAC44B886AD601DACC1FD77F828D07180DB8C599A3CCF
+            1B23B10A285E42B41340D184F19ED7C6340CC45CE05E63364BAD261CC2B670C5
+            980529781A124F80F027EC2A6914ECA9B857F38BEFC44791164A71A3288927C8
+            CBD58C35852FE94FF67D148862ABB06582E0C52B0955852FE94FD7F751209EC3
+            4CF3C0BA37E09AC21FE253B4E293406468506D8B38D484A3D8E71813247F890E
+            3CCB1B543E9B6B925A3485772C20E9045E9BFB97FF610755CCFBDA44B355288E
+            0578CCAE2578DC2DD6CFA1E229B0DF0EEAEF407EC9B237E2CF557476FF68C400
+            00000049454E44AE426082}
+          FileName = 'D:\Mekashron\Mask.png'
+        end>
+      Position.X = 304.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 46.000000000000000000
+      Size.Height = 10.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = img_SysButtonsClick
+    end
   end
 end

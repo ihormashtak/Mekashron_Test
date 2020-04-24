@@ -8,28 +8,31 @@ uses
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Edit, FMX.Objects;
 
 type
-  TForm1 = class(TForm)
-    Image_Email: TImage;
-    Image_Password: TImage;
-    Label1: TLabel;
-    Image_Logo: TImage;
-    Label2: TLabel;
+  Tfrm_Login = class(TForm)
+    img_Email: TImage;
+    img_Password: TImage;
+    lbl_Invite: TLabel;
+    img_Logo: TImage;
+    lbl_Logo: TLabel;
     lbl_ForgPass: TLabel;
-    Image_Login: TImage;
-    Image_Vector: TImage;
+    img_Login: TImage;
+    img_Vector: TImage;
     lbl_Login: TLabel;
     lbl_Div: TLabel;
     lbl_LogVia: TLabel;
-    Edit2: TEdit;
-    Edit1: TEdit;
-    Label4: TLabel;
-    Image_Vector2: TImage;
+    edt_Passw: TEdit;
+    edt_Email: TEdit;
+    lbl_areNew: TLabel;
+    img_Vector2: TImage;
     lbl_CreateAcc: TLabel;
+    pns_Sys: TPanel;
+    img_SysButtons: TImage;
     procedure FormCreate(Sender: TObject);
-    procedure FormResize(Sender: TObject);
     procedure lbl_LoginClick(Sender: TObject);
     procedure lbl_ForgPassClick(Sender: TObject);
     procedure lbl_CreateAccClick(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure img_SysButtonsClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,62 +41,49 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frm_Login: Tfrm_Login;
 
 implementation
 
 {$R *.fmx}
-{$R *.LgXhdpiTb.fmx ANDROID}
 {$R *.Windows.fmx MSWINDOWS}
-{$R *.XLgXhdpiTb.fmx ANDROID}
-{$R *.SmXhdpiPh.fmx ANDROID}
 {$R *.LgXhdpiPh.fmx ANDROID}
-{$R *.iPhone4in.fmx IOS}
-{$R *.Surface.fmx MSWINDOWS}
-{$R *.NmXhdpiPh.fmx ANDROID}
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure Tfrm_Login.FormCreate(Sender: TObject);
 begin
   MFIniWidth      := Width;
   MFIniHeight     := Height;
   Application.Title:='Login_entry_v0.1';
   Caption:= Application.Title;
-  Label1.TextSettings.FontColor:=$FF02245D;
-  Label4.TextSettings.FontColor:=$FF121212;
+  lbl_Invite.TextSettings.FontColor:=$FF02245D;
+  lbl_areNew.TextSettings.FontColor:=$FF121212;
   lbl_ForgPass.TextSettings.FontColor:=$FF02245D;
   lbl_CreateAcc.TextSettings.FontColor:=$FF02245D;
   lbl_LogVia.TextSettings.FontColor:=$FFA4A4A4;
 end;
 
-procedure TForm1.FormResize(Sender: TObject);
+procedure Tfrm_Login.FormResize(Sender: TObject);
 begin
-  //if (ClientWidth<360) or (ClientWidth>360) then ClientWidth:=360;
-  //if (ClientWidth<640) or (ClientWidth>640) then ClientHeight:=640
-
- { if Form1.Width>MFIniWidth then
-  begin
-    pnl3.Width:= Pan3IniWidth+Round((Form1.Width-MFIniWidth)*0.1);
-    pnl2.Width:= Pan2IniWidth+Round((Form1.Width-MFIniWidth)*0.1)
-
-  end
-  else  begin
-          pnl3.Width:= Pan3IniWidth;
-          pnl2.Width:= Pan2IniWidth
-
-        end; }
+  if (Width >360) or (Width <360) then  Width:=360;
+  if (Height >640) or (Height <640)then  Height:=640
 end;
 
-procedure TForm1.lbl_CreateAccClick(Sender: TObject);
+procedure Tfrm_Login.img_SysButtonsClick(Sender: TObject);
+begin
+  Close
+end;
+
+procedure Tfrm_Login.lbl_CreateAccClick(Sender: TObject);
 begin
   ShowMessage('You are touch the button "Create an accaunt"');
 end;
 
-procedure TForm1.lbl_ForgPassClick(Sender: TObject);
+procedure Tfrm_Login.lbl_ForgPassClick(Sender: TObject);
 begin
   ShowMessage('You are touch the button "Forgot your password?"');
 end;
 
-procedure TForm1.lbl_LoginClick(Sender: TObject);
+procedure Tfrm_Login.lbl_LoginClick(Sender: TObject);
 begin
   ShowMessage('You are touch the button "Login"');
 end;

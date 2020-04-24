@@ -1,9 +1,13 @@
 inherited Form1_LgXhdpiTb: TForm1_LgXhdpiTb
-  ClientHeight = 829
+  ClientHeight = 854
   ClientWidth = 480
   Padding.Left = 5.000000000000000000
   Padding.Right = 5.000000000000000000
+  StyleLookup = 'statusbarstyle'
   DesignerMasterStyle = 0
+  inherited Image_Password: TImage
+    Margins.Left = 11.000000000000000000
+  end
   inherited Label1: TLabel
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
@@ -230,6 +234,9 @@ inherited Form1_LgXhdpiTb: TForm1_LgXhdpiTb
   inherited lbl_LogVia: TLabel
     Size.Width = 60.000000000000000000
     Size.Height = 16.000000000000000000
+  end
+  inherited Edit2: TEdit
+    Margins.Left = 24.000000000000000000
   end
   inherited Label4: TLabel
     Size.Height = 16.000000000000000000

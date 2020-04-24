@@ -1,7 +1,10 @@
 inherited Form1_NmXhdpiPh: TForm1_NmXhdpiPh
-  ClientHeight = 615
   ClientWidth = 400
+  StyleLookup = 'statusbarstyle'
   DesignerMasterStyle = 0
+  inherited Image_Password: TImage
+    Margins.Left = 11.000000000000000000
+  end
   inherited Label1: TLabel
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
@@ -226,6 +229,9 @@ inherited Form1_NmXhdpiPh: TForm1_NmXhdpiPh
   end
   inherited lbl_LogVia: TLabel
     Size.Height = 16.000000000000000000
+  end
+  inherited Edit2: TEdit
+    Margins.Left = 24.000000000000000000
   end
   inherited Image_Vector2: TImage
     MultiResBitmap = <

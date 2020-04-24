@@ -1,22 +1,19 @@
-inherited Form1_Windows: TForm1_Windows
+inherited frm_Login_Windows: Tfrm_Login_Windows
   Padding.Left = 5.000000000000000000
   Padding.Right = 5.000000000000000000
   Position = DesktopCenter
+  StyleLookup = 'statusbarstyle'
   FormFactor.Width = 360
   FormFactor.Height = 640
   OnCreate = FormCreate
-  OnResize = FormResize
   DesignerMasterStyle = 0
-  inherited Image_Email: TImage
-    Anchors = []
+  inherited img_Password: TImage
+    Margins.Left = 11.000000000000000000
   end
-  inherited Image_Password: TImage
-    Anchors = []
-  end
-  inherited Label1: TLabel
+  inherited lbl_Invite: TLabel
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
-  inherited Image_Logo: TImage
+  inherited img_Logo: TImage
     MultiResBitmap = <
       item
         Width = 84
@@ -208,14 +205,14 @@ inherited Form1_Windows: TForm1_Windows
         FileName = 'D:\Mekashron\Logo2.png'
       end>
   end
-  inherited Label2: TLabel
+  inherited lbl_Logo: TLabel
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited lbl_ForgPass: TLabel
     TextSettings.Font.StyleExt = {04040000000000000004000000}
     TouchTargetExpansion.Right = 5.000000000000000000
   end
-  inherited Image_Vector: TImage
+  inherited img_Vector: TImage
     MultiResBitmap = <
       item
         Width = 17
@@ -234,13 +231,14 @@ inherited Form1_Windows: TForm1_Windows
         FileName = 'D:\Mekashron\Vector.png'
       end>
   end
-  inherited Edit2: TEdit
+  inherited edt_Passw: TEdit
     Position.Y = 375.000000000000000000
+    Margins.Left = 24.000000000000000000
   end
-  inherited Edit1: TEdit
+  inherited edt_Email: TEdit
     Position.Y = 323.000000000000000000
   end
-  inherited Image_Vector2: TImage
+  inherited img_Vector2: TImage
     MultiResBitmap = <
       item
         Width = 13

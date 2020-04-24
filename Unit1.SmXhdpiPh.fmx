@@ -1,7 +1,11 @@
 inherited Form1_SmXhdpiPh: TForm1_SmXhdpiPh
-  ClientHeight = 375
+  ClientHeight = 400
   ClientWidth = 250
+  StyleLookup = 'statusbarstyle'
   DesignerMasterStyle = 0
+  inherited Image_Password: TImage
+    Margins.Left = 11.000000000000000000
+  end
   inherited Label1: TLabel
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
@@ -222,6 +226,9 @@ inherited Form1_SmXhdpiPh: TForm1_SmXhdpiPh
           BB91840D8D31ED1B1BA189C047F45B2A0000000049454E44AE426082}
         FileName = 'D:\Mekashron\Vector.png'
       end>
+  end
+  inherited Edit2: TEdit
+    Margins.Left = 24.000000000000000000
   end
   inherited Image_Vector2: TImage
     MultiResBitmap = <

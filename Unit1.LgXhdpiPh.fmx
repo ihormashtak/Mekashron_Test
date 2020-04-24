@@ -1,11 +1,24 @@
-inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+inherited frm_Login_LgXhdpiPh: Tfrm_Login_LgXhdpiPh
+  BorderStyle = Sizeable
   ClientHeight = 695
   ClientWidth = 450
+  StyleLookup = 'statusbarstyle'
   DesignerMasterStyle = 0
-  inherited Label1: TLabel
+  inherited img_Email: TImage
+    Position.X = 60.000000000000000000
+  end
+  inherited img_Password: TImage
+    Margins.Left = 11.000000000000000000
+    Position.X = 60.000000000000000000
+  end
+  inherited lbl_Invite: TLabel
+    AutoSize = True
+    Position.X = 60.000000000000000000
+    Size.Width = 450.000000000000000000
+    Size.Height = 21.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
-  inherited Image_Logo: TImage
+  inherited img_Logo: TImage
     MultiResBitmap = <
       item
         Width = 84
@@ -196,17 +209,23 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
           000049454E44AE426082}
         FileName = 'D:\Mekashron\Logo2.png'
       end>
+    Position.X = 186.000000000000000000
   end
-  inherited Label2: TLabel
+  inherited lbl_Logo: TLabel
+    Position.X = 206.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited lbl_ForgPass: TLabel
+    Position.X = 107.000000000000000000
     Size.Width = 134.000000000000000000
     Size.Height = 16.000000000000000000
     TextSettings.Font.StyleExt = {04040000000000000004000000}
     TouchTargetExpansion.Right = 5.000000000000000000
   end
-  inherited Image_Vector: TImage
+  inherited img_Login: TImage
+    Position.X = 60.000000000000000000
+  end
+  inherited img_Vector: TImage
     MultiResBitmap = <
       item
         Width = 17
@@ -224,15 +243,32 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
           BB91840D8D31ED1B1BA189C047F45B2A0000000049454E44AE426082}
         FileName = 'D:\Mekashron\Vector.png'
       end>
+    Position.X = 194.000000000000000000
+  end
+  inherited lbl_Login: TLabel
+    Position.X = 220.000000000000000000
+  end
+  inherited lbl_Div: TLabel
+    Position.X = 246.000000000000000000
   end
   inherited lbl_LogVia: TLabel
+    Position.X = 260.000000000000000000
     Size.Width = 60.000000000000000000
     Size.Height = 16.000000000000000000
   end
-  inherited Label4: TLabel
+  inherited edt_Passw: TEdit
+    Position.X = 72.000000000000000000
+    Margins.Left = 24.000000000000000000
+    Size.Width = 313.000000000000000000
+  end
+  inherited edt_Email: TEdit
+    Position.X = 72.000000000000000000
+  end
+  inherited lbl_areNew: TLabel
+    Position.X = 191.000000000000000000
     Size.Height = 16.000000000000000000
   end
-  inherited Image_Vector2: TImage
+  inherited img_Vector2: TImage
     MultiResBitmap = <
       item
         Width = 13
@@ -250,10 +286,18 @@ inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
           B27D0209E168D42EA8FCC40000000049454E44AE426082}
         FileName = 'D:\Mekashron\Vector2.png'
       end>
+    Position.X = 139.000000000000000000
   end
   inherited lbl_CreateAcc: TLabel
+    Position.X = 161.000000000000000000
     Size.Width = 138.000000000000000000
     Size.Height = 21.000000000000000000
     TextSettings.Font.StyleExt = {04070000000000000004000000}
+  end
+  inherited pns_Sys: TPanel
+    Size.Width = 451.000000000000000000
+    inherited img_SysButtons: TImage
+      Position.X = 400.000000000000000000
+    end
   end
 end
