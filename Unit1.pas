@@ -10,14 +10,26 @@ uses
 type
   TForm1 = class(TForm)
     Image_Email: TImage;
-    Edit1: TEdit;
-    Edit2: TEdit;
     Image_Password: TImage;
     Label1: TLabel;
-    Image3: TImage;
+    Image_Logo: TImage;
     Label2: TLabel;
+    lbl_ForgPass: TLabel;
+    Image_Login: TImage;
+    Image_Vector: TImage;
+    lbl_Login: TLabel;
+    lbl_Div: TLabel;
+    lbl_LogVia: TLabel;
+    Edit2: TEdit;
+    Edit1: TEdit;
+    Label4: TLabel;
+    Image_Vector2: TImage;
+    lbl_CreateAcc: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
+    procedure lbl_LoginClick(Sender: TObject);
+    procedure lbl_ForgPassClick(Sender: TObject);
+    procedure lbl_CreateAccClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,9 +54,15 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  //Label1.TextSettings.Fontcolor:= $02245D;
-  MFIniWidth      := Form1.Width;
-  MFIniHeight     := Form1.Height;
+  MFIniWidth      := Width;
+  MFIniHeight     := Height;
+  Application.Title:='Login_entry_v0.1';
+  Caption:= Application.Title;
+  Label1.TextSettings.FontColor:=$FF02245D;
+  Label4.TextSettings.FontColor:=$FF121212;
+  lbl_ForgPass.TextSettings.FontColor:=$FF02245D;
+  lbl_CreateAcc.TextSettings.FontColor:=$FF02245D;
+  lbl_LogVia.TextSettings.FontColor:=$FFA4A4A4;
 end;
 
 procedure TForm1.FormResize(Sender: TObject);
@@ -63,6 +81,21 @@ begin
           pnl2.Width:= Pan2IniWidth
 
         end; }
+end;
+
+procedure TForm1.lbl_CreateAccClick(Sender: TObject);
+begin
+  ShowMessage('You are touch the button "Create an accaunt"');
+end;
+
+procedure TForm1.lbl_ForgPassClick(Sender: TObject);
+begin
+  ShowMessage('You are touch the button "Forgot your password?"');
+end;
+
+procedure TForm1.lbl_LoginClick(Sender: TObject);
+begin
+  ShowMessage('You are touch the button "Login"');
 end;
 
 end.
